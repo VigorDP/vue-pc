@@ -90,7 +90,7 @@ video {
   font-size: 100%;
   font: inherit;
   vertical-align: baseline;
-  box-sizing: content-box;
+  box-sizing: border-box;
   /*自定义的*/
 }
 
@@ -107,7 +107,7 @@ menu,
 nav,
 section {
   display: block;
-  box-sizing: content-box;
+  box-sizing: border-box;
   /*自定义的*/
 }
 
@@ -147,10 +147,12 @@ a:hover,
 a:visited,
 a:link,
 a:active {
-  color: black;
-  /*自定义的*/
+  font-size: 16px;
+  font-family: Microsoft YaHei;
+  font-weight: 400;
+  color: rgba(254, 254, 254, .5);
 }
 
-a.router-link-active {
-  color: red
+::-webkit-scrollbar {
+  display: none
 }
