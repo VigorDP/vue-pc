@@ -19,7 +19,7 @@ module.exports = {
       },
       splitChunks: {
         cacheGroups: {
-          // 首先: 分离 react 相关库文件(通过priority属性确定打包顺序)
+          // 首先: 分离 vue 相关库文件(通过priority属性确定打包顺序)
           vue: {
             name: 'vue',
             test: /vue[\\/]|vuex|vue-router/,
