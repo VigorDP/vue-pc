@@ -20,13 +20,22 @@ export default new Vuex.Store({
     setUserInfo(state, user) {
       state.userInfo = user;
     },
+    clearUserInfo(state, user) {
+      state.userInfo = {};
+    },
   },
   actions: {
     setUserInfo({
       commit
     }, user) {
-      window.window.sessionStorage.user = JSON.stringify(user);
+      window.window.localStorage.user = JSON.stringify(user);
       commit('setUserInfo', user)
+    },
+    clearUserInfo({
+      commit
+    }) {
+      indow.window.localStorage.user = null
+      commit('clearUserInfo')
     }
   }
 })

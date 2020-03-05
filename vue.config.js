@@ -1,6 +1,7 @@
 // 以下配置基于 @vue/cli 3.6.3
-const BundleAnalyzerPlugin = require('webpack-bundle-analyzer').BundleAnalyzerPlugin
-const resolve = require('path').resolve;
+const BundleAnalyzerPlugin = require('webpack-bundle-analyzer')
+  .BundleAnalyzerPlugin
+const resolve = require('path').resolve
 module.exports = {
   publicPath: process.env.NODE_ENV === 'production' ? '/' : '/',
   outputDir: 'dist',
@@ -38,18 +39,21 @@ module.exports = {
         }
       }
     },
-    plugins: process.env.NODE_ENV === 'production' ? [
-      new BundleAnalyzerPlugin({
-        analyzerMode: 'static'
-      })
-    ] : [],
+    plugins:
+      process.env.NODE_ENV === 'production'
+        ? [
+            new BundleAnalyzerPlugin({
+              analyzerMode: 'static'
+            })
+          ]
+        : [],
     resolve: {
       extensions: ['.js', '.jsx', '.json', '.scss', '.less', '.css', '.vue'], // 该扩展名类型文件在引入时可省略扩展名
       alias: {
-        "@src": resolve('src'),
+        '@src': resolve('src'),
         '@views': resolve('src/views'),
         '@components': resolve('src/components'),
-        '@styles': resolve('src/assets/styles'),
+        '@styles': resolve('src/assets/styles')
       }
     }
   },
@@ -62,9 +66,6 @@ module.exports = {
         target: '<url>',
         ws: true,
         changeOrigin: true
-      },
-      '/foo': {
-        target: '<other_url>'
       }
     }
   },
